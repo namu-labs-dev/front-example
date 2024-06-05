@@ -5,7 +5,7 @@ type Props = {
   onClickLeftIcon: () => void;
 };
 
-export const HomeHeaderModule = (props: Props) => {
+export const PageWithModalHeaderModule = (props: Props) => {
   return (
     <HeaderAtom title={props.title} onClickLeftIcon={props.onClickLeftIcon} />
   );

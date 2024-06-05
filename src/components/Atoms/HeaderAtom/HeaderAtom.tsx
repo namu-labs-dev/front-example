@@ -3,6 +3,7 @@ import SVGAtom from "../SVGAtom/SVGAtom";
 
 type Props = {
   title: string;
+  onClickLeftIcon: () => void;
 };
 
 export const HeaderAtom = (props: Props) => {
@@ -11,7 +12,7 @@ export const HeaderAtom = (props: Props) => {
       {/* Sample using custom svg */}
       <div
         className="flex h-full w-[50px] cursor-pointer items-center justify-center"
-        onClick={() => console.log("svg clicked")}
+        onClick={props.onClickLeftIcon}
       >
         <SVGAtom iconName="arrowLeft" width={20} height={20} color="#BFBFBF" />
       </div>
