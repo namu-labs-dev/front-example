@@ -12,3 +12,9 @@
   display: none;
 }
 /* Remove Scroll Bar : End */
+
+/* Set Link Color */
+a {
+  color: black !important;
+}
+/* Set Link Color : End */
