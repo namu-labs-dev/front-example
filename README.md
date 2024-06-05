@@ -9,7 +9,9 @@
 ## Atomic Design Pattern
 
 - page.tsx : contains Container
-- Container : contains Template / all props will be handled
+- Container : contains Template
+  - handle all props
+  - handle business logics
 - Template : contains Modules
 - Modules : contains Components and Atoms
 - Components
@@ -19,3 +21,5 @@
 
 - /empty : to understand design pattern
 - /home : default page with header and footer
+- /pageWithModal
+- /pageWithForm
