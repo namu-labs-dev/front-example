@@ -1,8 +1,16 @@
+import { message } from "antd";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 
 export const HomeContainer = () => {
+  const headerLeftIconClicked = () => {
+    void message.info("can't go back");
+  };
+
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
-    homeHeaderModuleProps: { title: "HomeHeaderModule" },
+    homeHeaderModuleProps: {
+      title: "HomeHeaderModule",
+      onClickLeftIcon: headerLeftIconClicked,
+    },
     homeContentModuleProps: {
       title: "HomeContentModule",
       sampleLinks: ["/empty", "/pageWithModal"],
