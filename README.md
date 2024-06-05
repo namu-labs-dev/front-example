@@ -13,9 +13,9 @@
   - handle all props
   - handle business logics
 - Template : contains Modules
-- Modules : contains Components and Atoms
-- Components
-- Atoms : Basic components declared in Figma
+- Module : contains Components and Atoms
+- Component
+- Atom : Basic component declared in Figma
 
 ## Sample pages
 
