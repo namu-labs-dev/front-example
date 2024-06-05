@@ -16,7 +16,7 @@ export const HeaderAtom = (props: Props) => {
         <SVGAtom iconName="arrowLeft" width={20} height={20} color="#BFBFBF" />
       </div>
 
-      <div className="">{props.title}</div>
+      <div>{props.title}</div>
 
       {/* Sample using Antd icon */}
       <div
