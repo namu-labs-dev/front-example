@@ -8,14 +8,20 @@
 
 ## Atomic Design Pattern
 
-- page.tsx : contains Container
-- Container : contains Template
+- page.tsx
+  - contains Container
+- Container
+  - contains Template
   - handle all props
   - handle business logics
-- Template : contains Modules
-- Module : contains Components and Atoms
+- Template
+  - contains Modules
+  - set layout
+- Module
+  - contains Components and Atoms
 - Component
-- Atom : Basic component declared in Figma
+- Atom
+  - Basic component declared in Figma
 
 ## Sample pages
 
