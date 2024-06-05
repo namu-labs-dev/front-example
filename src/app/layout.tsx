@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
+import { RootStyleRegistry } from "./RootStyleRegistry";
 
 export const metadata = {
   title: "Frontend Sample",
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body className="bg-[#efefef]">
         <div className="m-auto h-screen max-w-[500px] overflow-auto bg-white">
-          {children}
+          <RootStyleRegistry>{children}</RootStyleRegistry>
         </div>
       </body>
     </html>
