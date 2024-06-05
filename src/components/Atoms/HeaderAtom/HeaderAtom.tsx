@@ -1,6 +1,5 @@
 import { SettingOutlined } from "@ant-design/icons";
 import SVGAtom from "../SVGAtom/SVGAtom";
-import { Header } from "antd/es/layout/layout";
 
 type Props = {
   title: string;
