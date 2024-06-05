@@ -1,35 +1,22 @@
-import Link from "next/link";
+import { LinkList } from "~/components/Components/LinkList/LinkList";
+import { NumberList } from "~/components/Components/NumberList/NumberList";
 
 type Props = {
   title: string;
+  sampleLinks: string[];
+  sampleNumbers: number[];
 };
 
 export const HomeContentModule = (props: Props) => {
-  const NumberList = () => {
-    return (
-      <div>
-        {Array.from({ length: 100 }, (_, i) => i + 1).map((number) => (
-          <div key={number}>{number}</div>
-        ))}
-      </div>
-    );
-  };
-
   return (
     <div className="m-[20px]">
       <div className="text-[20px]">{props.title}</div>
 
       <div className="my-3">
-        [Links]
-        <div>
-          <Link href="/empty">/empty</Link>
-        </div>
-        <div>
-          <Link href="/pageWithModal">/pageWithModal</Link>
-        </div>
+        <LinkList links={props.sampleLinks} />
       </div>
 
-      <NumberList />
+      <NumberList numbers={props.sampleNumbers} />
     </div>
   );
 };
