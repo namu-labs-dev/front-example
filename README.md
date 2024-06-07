@@ -44,6 +44,10 @@
   - Example: `/app/david`
 - Step 3.
   - Create one Pull Request (PR) for each route
+  - make your own branch from dev
+    - git checkout dev
+    - (dev) git checkout -b david
+    - (david)
   - /app/david/testPage1
     - branchName : david_testPage1
     - Create a PR when your work is done
