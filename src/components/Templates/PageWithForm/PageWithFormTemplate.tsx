@@ -7,6 +7,9 @@ type Props = {
   pageWithFormHeaderModuleProps: React.ComponentProps<
     typeof PageWithFormHeaderModule
   >;
+  pageWithFormFormModuleProps: React.ComponentProps<
+    typeof PageWithFormFormModule
+  >;
 };
 
 export const PageWithFormTemplate = (props: Props) => {
@@ -16,7 +19,7 @@ export const PageWithFormTemplate = (props: Props) => {
         <PageWithFormHeaderModule {...props.pageWithFormHeaderModuleProps} />
       </Header>
       <Content style={{ overflow: "auto" }}>
-        <PageWithFormFormModule />
+        <PageWithFormFormModule {...props.pageWithFormFormModuleProps} />
       </Content>
     </Layout>
   );
