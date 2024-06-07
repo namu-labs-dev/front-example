@@ -3,5 +3,12 @@ type Props = {
 };
 
 export const NumberList = (props: Props) => {
-  return props.numbers.map((number) => <div key={number}>{number}</div>);
+  return (
+    <div>
+      [Numbers]
+      {props.numbers.map((number) => (
+        <div key={number}>{number}</div>
+      ))}
+    </div>
+  );
 };
