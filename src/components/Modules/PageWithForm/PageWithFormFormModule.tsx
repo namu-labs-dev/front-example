@@ -17,7 +17,11 @@ import { useState } from "react";
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
-export const PageWithFormFormModule = () => {
+type Props = {
+  setFormData: (data: any) => void;
+};
+
+export const PageWithFormFormModule = (props: Props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [form] = Form.useForm();
 
@@ -25,12 +29,19 @@ export const PageWithFormFormModule = () => {
     <>
       <Form
         form={form}
-        labelCol={{ span: 4 }}
+        labelCol={{ span: 6 }}
         wrapperCol={{ span: 14 }}
+        onFieldsChange={(changedFields) => {
+          props.setFormData((prevData: any) =>
+            changedFields.reduce(
+              (acc, { name, value }) => ({ ...acc, [name[0]]: value }),
+              prevData,
+            ),
+          );
+        }}
         layout="horizontal"
         style={{ maxWidth: 600 }}
         onFinish={(values) => {
-          console.log(values);
           setIsModalVisible(true);
         }}
       >
