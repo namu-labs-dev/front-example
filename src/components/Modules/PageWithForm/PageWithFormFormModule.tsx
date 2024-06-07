@@ -11,9 +11,8 @@ import {
   Slider,
   ColorPicker,
   Input,
-  Modal,
+  message,
 } from "antd";
-import { useState } from "react";
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
@@ -22,8 +21,11 @@ type Props = {
 };
 
 export const PageWithFormFormModule = (props: Props) => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
   const [form] = Form.useForm();
+
+  const onFinish = (values: any) => {
+    void message.info(JSON.stringify(values));
+  };
 
   return (
     <>
@@ -41,9 +43,7 @@ export const PageWithFormFormModule = (props: Props) => {
         }}
         layout="horizontal"
         style={{ maxWidth: 600 }}
-        onFinish={(values) => {
-          setIsModalVisible(true);
-        }}
+        onFinish={onFinish}
       >
         <Form.Item label="Radio" name="Radio">
           <Radio.Group>
@@ -116,19 +116,6 @@ export const PageWithFormFormModule = (props: Props) => {
           </Button>
         </div>
       </Form>
-      <Modal
-        title="Submit Modal"
-        open={isModalVisible}
-        onClose={() => setIsModalVisible(false)}
-        onOk={() => setIsModalVisible(false)}
-        onCancel={() => setIsModalVisible(false)}
-      >
-        {Object.entries(form.getFieldsValue()).map(([key, value]) => (
-          <p key={key}>
-            {key}: {value as any}
-          </p>
-        ))}
-      </Modal>
     </>
   );
 };
