@@ -47,7 +47,7 @@
   - make your own branch from dev
     - git checkout dev
     - (dev) git checkout -b david
-    - (david)
+    - (david) git push origin david
   - /app/david/testPage1
     - branchName : david_testPage1
     - Create a PR when your work is done
