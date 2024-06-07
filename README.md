@@ -32,7 +32,10 @@
 
 ## Your Mission
 
-- [Link](https://www.naver.com)
+- [Figma Link - what you should do](https://www.naver.com)
+- No questions allowed before your mission is done
+  - This is part of our process
+  - You can ask question after your misssion is completed
 - Step 1.
   - Analyze the given code pattern
   - Understand the structure and functionality of the code
@@ -43,7 +46,7 @@
   - Create one Pull Request (PR) for each route
   - /app/david/testPage1
     - branchName : david_testPage1
-    - create PR when your work done
+    - Create a PR when your work is done
   - /app/david/testPage2
     - branchName : david_testPage2
-    - create PR when your work done
+    - Create a PR when your work is done
