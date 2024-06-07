@@ -26,7 +26,7 @@ export const PageWithModalContainer = () => {
       onOpenDrawer: () => setIsDrawerOpen(true),
       onCloseDrawer: () => setIsDrawerOpen(false),
       onOpenToast: () => {
-        message.info("Toast Content");
+        void message.info("Toast Content");
       },
     },
   };
