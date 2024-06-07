@@ -11,9 +11,8 @@ import {
   Slider,
   ColorPicker,
   Input,
-  Modal,
+  message,
 } from "antd";
-import { useState } from "react";
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
@@ -25,7 +24,7 @@ export const PageWithFormFormModule = (props: Props) => {
   const [form] = Form.useForm();
 
   const onFinish = (values: any) => {
-    console.log(values);
+    void message.info(JSON.stringify(values));
   };
 
   return (
