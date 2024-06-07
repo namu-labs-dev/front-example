@@ -13,7 +13,11 @@ export const HomeContainer = () => {
     },
     homeContentModuleProps: {
       title: "HomeContentModule",
-      sampleLinks: ["/empty", "/pageWithModal", "/pageWithForm"],
+      sampleLinks: [
+        "/sample/empty",
+        "/sample/pageWithModal",
+        "/sample/pageWithForm",
+      ],
       sampleNumbers: Array.from({ length: 100 }, (_, i) => i + 1),
     },
     homeFooterModuleProps: { title: "HomeFooterModule" },
