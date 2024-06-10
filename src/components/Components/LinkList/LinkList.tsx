@@ -7,7 +7,7 @@ type Props = {
 export const LinkList = (props: Props) => {
   return (
     <div>
-      [Links]
+      <b>[Sample Pages]</b>
       {props.links.map((link) => (
         <div key={link}>
           <Link href={link}>{link}</Link>

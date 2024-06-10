@@ -8,17 +8,15 @@ export const HomeContainer = () => {
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeHeaderModuleProps: {
-      title: "HomeHeaderModule",
+      title: "Sample Home",
       onClickLeftIcon: headerLeftIconClicked,
     },
     homeContentModuleProps: {
-      title: "HomeContentModule",
       sampleLinks: [
         "/sample/empty",
         "/sample/pageWithModal",
         "/sample/pageWithForm",
       ],
-      sampleNumbers: Array.from({ length: 100 }, (_, i) => i + 1),
     },
     homeFooterModuleProps: { title: "HomeFooterModule" },
   };
