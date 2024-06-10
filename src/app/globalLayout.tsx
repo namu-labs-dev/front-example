@@ -2,6 +2,7 @@
 
 import SnapshotModal from "~/components/Atoms/Modal/SnapshotModal";
 import { RootStyleRegistry } from "./RootStyleRegistry";
+import SnapshotDrawerAtom from "~/components/Atoms/DrawerAtom/SnapshotDrawerAtom";
 
 export default function GlobalLayout({
   children,
@@ -13,6 +14,7 @@ export default function GlobalLayout({
       <div className="m-auto h-screen max-w-[500px] overflow-auto bg-white">
         <RootStyleRegistry>{children}</RootStyleRegistry>
       </div>
+      <SnapshotDrawerAtom />
       <SnapshotModal />
     </>
   );
