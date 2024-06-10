@@ -1,11 +1,13 @@
-import { Button, Drawer } from "antd";
+import { Button } from "antd";
+import { PageWithModalContentCustomModal } from "~/components/Components/PageWithModalContentCustomModal/PageWithModalContentCustomModal";
 
 type Props = {
   title: string;
   onOpenModal: () => void;
-  isDrawerOpen: boolean;
+  customModalProps: React.ComponentProps<
+    typeof PageWithModalContentCustomModal
+  >;
   onOpenDrawer: () => void;
-  onCloseDrawer: () => void;
   onOpenToast: () => void;
 };
 
@@ -21,17 +23,20 @@ export const PageWithModalContentModule = (props: Props) => {
       </div>
 
       <div>
+        <Button
+          className="my-3"
+          type="primary"
+          onClick={() => props.customModalProps.modalProps.setModalOpen(true)}
+        >
+          Open Custom Modal
+        </Button>
+        <PageWithModalContentCustomModal {...props.customModalProps} />
+      </div>
+
+      <div>
         <Button className="my-3" type="primary" onClick={props.onOpenDrawer}>
           Open Drawer
         </Button>
-        <Drawer
-          title="Drawer Title"
-          placement="bottom"
-          closable={true}
-          open={props.isDrawerOpen}
-          onClose={props.onCloseDrawer}
-          width={400}
-        />
       </div>
 
       <div>

@@ -1,10 +1,12 @@
-import { message, Modal } from "antd";
+import { message } from "antd";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { PageWithModalTemplate } from "~/components/Templates/PageWithModal/PageWithModalTemplate";
+import ModalStore from "~/store/ModalStore";
 
 export const PageWithModalContainer = () => {
   const router = useRouter();
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const pagewithmodalTemplateProps: React.ComponentProps<
@@ -16,15 +18,22 @@ export const PageWithModalContainer = () => {
     },
     pageWithModalContentModuleProps: {
       title: "PageWithModalContentModule",
-      onOpenModal: () => {
-        Modal.info({
-          title: "Modal Title",
-          content: "Modal Content",
-        });
+      onOpenModal: () =>
+        ModalStore.open("TitleAndContent", {
+          TitleAndContent: {
+            title: "Modal Title",
+            description: "Modal Content",
+          },
+        }),
+      customModalProps: {
+        modalProps: {
+          isModalOpen: isCustomModalOpen,
+          setModalOpen: setIsCustomModalOpen,
+        },
+        title: "Custom Modal Title",
+        description: "Custom Modal Description",
       },
-      isDrawerOpen,
       onOpenDrawer: () => setIsDrawerOpen(true),
-      onCloseDrawer: () => setIsDrawerOpen(false),
       onOpenToast: () => {
         void message.info("Toast Content");
       },
