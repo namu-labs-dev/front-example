@@ -4,6 +4,6 @@ type Props = {
   headerProps: React.ComponentProps<typeof HeaderAtom>;
 };
 
-export const HomeHeaderModule = (props: Props) => {
+export const EmptyHeaderModule = (props: Props) => {
   return <HeaderAtom {...props.headerProps} />;
 };

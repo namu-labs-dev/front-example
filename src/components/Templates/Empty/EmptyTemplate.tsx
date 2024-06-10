@@ -1,23 +1,27 @@
 import { Layout } from "antd";
-import { Content } from "antd/es/layout/layout";
-import { EmptyFirstModule } from "~/components/Modules/Empty/EmptyFirstModule";
-import { EmptySecontModule } from "~/components/Modules/Empty/EmptySecontModule";
-import { EmptyThirdModule } from "~/components/Modules/Empty/EmptyThirdModule";
+import { Content, Footer, Header } from "antd/es/layout/layout";
+import { EmptyContentModule } from "~/components/Modules/Empty/EmptyContentModule";
+import { EmptyFooterModule } from "~/components/Modules/Empty/EmptyFooterModule";
+import { EmptyHeaderModule } from "~/components/Modules/Empty/EmptyHeaderModule";
 
 type Props = {
-  emptyFirstModuleProps: React.ComponentProps<typeof EmptyFirstModule>;
-  emptySecontModuleProps: React.ComponentProps<typeof EmptySecontModule>;
-  emptyThirdModuleProps: React.ComponentProps<typeof EmptyThirdModule>;
+  emptyHeaderModuleProps: React.ComponentProps<typeof EmptyHeaderModule>;
+  emptyContentModuleProps: React.ComponentProps<typeof EmptyContentModule>;
+  emptyFooterModuleProps: React.ComponentProps<typeof EmptyFooterModule>;
 };
 
 export const EmptyTemplate = (props: Props) => {
   return (
     <Layout style={{ height: "100%" }}>
+      <Header style={{ padding: 0, height: 50 }}>
+        <EmptyHeaderModule {...props.emptyHeaderModuleProps} />
+      </Header>
       <Content style={{ overflow: "auto" }}>
-        <EmptyFirstModule {...props.emptyFirstModuleProps} />
-        <EmptySecontModule {...props.emptySecontModuleProps} />
-        <EmptyThirdModule {...props.emptyThirdModuleProps} />
+        <EmptyContentModule {...props.emptyContentModuleProps} />
       </Content>
+      <Footer style={{ padding: 0, minHeight: 50 }}>
+        <EmptyFooterModule {...props.emptyFooterModuleProps} />
+      </Footer>
     </Layout>
   );
 };
