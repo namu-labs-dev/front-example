@@ -10,21 +10,25 @@ export default function BsangsHomeContainer() {
   const [messagesSectionContents, setMessagesSectionContents] = useState<
     MessagesSectionContentProps[]
   >([]);
+  const [messageListContents, setMessageListContents] = useState<any[]>([]);
 
   const fetchMessagesSectionContents = async () => {
-    // Dummy data
-    const titles = ["Proxima", "Proxima2", "Proxima3"];
+    // dynamic import dummy data
+    const { MESSAGE_SECTION_CONTENTS } = await import("./dummy");
 
-    const contents = titles.map((title: any) => ({
-      iconUrl: "http://localhost:3000/dummy/proximaLogo.svg",
-      title: title,
-      onClick: () => alert(`Clicked ${title}`),
-    }));
-    setMessagesSectionContents(contents);
+    setMessagesSectionContents(MESSAGE_SECTION_CONTENTS);
+  };
+
+  const fetchMessageListContents = async () => {
+    // dynamic import dummy data
+    const { MESSAGE_LIST_CONTENTS } = await import("./dummy");
+
+    setMessageListContents(MESSAGE_LIST_CONTENTS);
   };
 
   useEffect(() => {
     void fetchMessagesSectionContents();
+    void fetchMessageListContents();
   }, []);
 
   const homeTemplateProps: React.ComponentProps<typeof BsangsHomeTemplate> = {
@@ -42,7 +46,9 @@ export default function BsangsHomeContainer() {
       contents: messagesSectionContents,
     },
 
-    messageListModuleProps: {},
+    messageListModuleProps: {
+      contents: messageListContents,
+    },
   };
 
   return <BsangsHomeTemplate {...homeTemplateProps} />;
