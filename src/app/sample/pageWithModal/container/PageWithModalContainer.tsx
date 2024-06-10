@@ -15,14 +15,14 @@ export const PageWithModalContainer = () => {
       onClickLeftIcon: () => router.back(),
     },
     pageWithModalContentModuleProps: {
-      onOpenModal: () =>
+      onOpenSnapshotModal: () =>
         ModalStore.open("TitleAndContent", {
           TitleAndContent: {
             title: "Modal Title",
             description: "Modal Content",
           },
         }),
-      customModalProps: {
+      modalProps: {
         modalProps: {
           isModalOpen: isCustomModalOpen,
           setModalOpen: setIsCustomModalOpen,
