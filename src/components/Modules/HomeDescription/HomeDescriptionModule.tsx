@@ -11,7 +11,7 @@ export const HomeDescriptionModule = () => {
           1. 우리의 페이지 구성 규칙의 미흡함을 발견하고, 이를 개선하여 결과물에 반영하는 것(이 경우 주석을 통한 설명을 작성해야 함)
           2. Sample 코드에서 제공하는 기초 컴포넌트의 미흡함을 발견하고, 이를 개선하여 결과물에 반영하는 것(이 경우 주석을 통한 설명을 작성해야 함)
         예시 페이지들의 역할 간단 설명 
-          1. Empty: 페이지 구성 규칙 및 기초 layout을 확인할 수 있는 페이지
+          1. Empty: 페이지 구성 규칙, props 사용 규칙, 기초 layout을 확인할 수 있는 페이지
           2. PageWithModal: 기초 컴포넌트인 Modal 컴포넌트의 사용법을 확인할 수 있는 페이지
           3. PageWithForm: 기초 컴포넌트인 Form 컴포넌트의 사용법을 확인할 수 있는 페이지
         
@@ -21,8 +21,8 @@ export const HomeDescriptionModule = () => {
         <b>Simple explanation of the roles of sample pages</b>
         <ol className="list-outside list-decimal pl-7">
           <li>
-            Empty: A page where you can check the page configuration rules and
-            basic layout
+            Empty: A page where you can check the page configuration rules, prop
+            usage rules, and basic layout
           </li>
           <li>
             PageWithModal: A page where you can check how to use the basic
