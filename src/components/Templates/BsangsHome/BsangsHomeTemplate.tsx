@@ -1,22 +1,28 @@
 import { Layout } from "antd";
-import { BsangsFooterAtom } from "~/components/Atoms/BsangsFooterAtom/BsangsFooterAtom";
-import { BsangsHeaderAtom } from "~/components/Atoms/BsangsHeaderAtom/BsangsHeaderAtom";
+import { BsangsHomeFooterModule } from "~/components/Modules/BsangsHome/BsangsHomeFooterModule";
+import { BsangsHomeHeaderModule } from "~/components/Modules/BsangsHome/BsangsHomeHeaderModule";
+import { BsangsHomeMessageListModule } from "~/components/Modules/BsangsHome/BsangsHomeMessageListModule";
+import { BsangsHomeMessagesSectionModule } from "~/components/Modules/BsangsHome/BsangsHomeMessagesSectionModule";
 
 type Props = {
-  headerModuleProps: React.ComponentProps<typeof BsangsHeaderAtom>;
-  footerModuleProps: React.ComponentProps<typeof BsangsFooterAtom>;
+  headerModuleProps: React.ComponentProps<typeof BsangsHomeHeaderModule>;
+  footerModuleProps: React.ComponentProps<typeof BsangsHomeFooterModule>;
+
+  messagesSectionModuleProps: React.ComponentProps<
+    typeof BsangsHomeMessagesSectionModule
+  >;
+  messageListModuleProps: React.ComponentProps<
+    typeof BsangsHomeMessageListModule
+  >;
 };
 
 export default function BsangsHomeTemplate(props: Props) {
   return (
     <Layout style={{ height: "100%", backgroundColor: "#1F1F1F" }}>
-      <div className="sticky top-0">
-        <BsangsHeaderAtom {...props.headerModuleProps} />
-      </div>
-
-      <div className="fixed bottom-0 w-full max-w-[500px]">
-        <BsangsFooterAtom {...props.footerModuleProps} />
-      </div>
+      <BsangsHomeHeaderModule {...props.headerModuleProps} />
+      <BsangsHomeMessagesSectionModule {...props.messagesSectionModuleProps} />
+      <BsangsHomeMessageListModule {...props.messageListModuleProps} />
+      <BsangsHomeFooterModule {...props.footerModuleProps} />
     </Layout>
   );
 }
