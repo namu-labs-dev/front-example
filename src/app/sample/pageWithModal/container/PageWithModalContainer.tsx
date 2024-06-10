@@ -1,4 +1,3 @@
-import { message } from "antd";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { PageWithModalTemplate } from "~/components/Templates/PageWithModal/PageWithModalTemplate";
@@ -7,7 +6,6 @@ import ModalStore from "~/store/ModalStore";
 export const PageWithModalContainer = () => {
   const router = useRouter();
   const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const pagewithmodalTemplateProps: React.ComponentProps<
     typeof PageWithModalTemplate
@@ -17,7 +15,6 @@ export const PageWithModalContainer = () => {
       onClickLeftIcon: () => router.back(),
     },
     pageWithModalContentModuleProps: {
-      title: "PageWithModalContentModule",
       onOpenModal: () =>
         ModalStore.open("TitleAndContent", {
           TitleAndContent: {
@@ -32,10 +29,6 @@ export const PageWithModalContainer = () => {
         },
         title: "Custom Modal Title",
         description: "Custom Modal Description",
-      },
-      onOpenDrawer: () => setIsDrawerOpen(true),
-      onOpenToast: () => {
-        void message.info("Toast Content");
       },
     },
   };
