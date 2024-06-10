@@ -46,7 +46,7 @@ export const BsangsFooterAtom = (props: Props) => {
   ];
 
   return (
-    <div className="flex h-[60px] items-center justify-between bg-black">
+    <div className="flex h-[60px] items-center justify-between bg-[#262626]">
       {buttons.map((button) => {
         return (
           <FooterMenu
