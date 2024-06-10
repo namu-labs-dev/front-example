@@ -10,7 +10,7 @@ type Props = {
 export const PageWithModalContentCustomModal = (props: Props) => {
   return (
     <Modal {...props.modalProps}>
-      <div className="flex h-fit w-80 flex-col gap-4 p-8 text-white">
+      <div className="flex h-fit w-80 flex-col gap-4 p-8">
         <h1 className="text-2xl">{props.title}</h1>
         <p>{props.description}</p>
         <Button onClick={() => props.modalProps.setModalOpen(false)}>

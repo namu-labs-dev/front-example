@@ -13,7 +13,7 @@ export const TitleAndContentModal = () => {
 
   return (
     <ModalContainer>
-      <div className="flex h-fit w-80 flex-col gap-4 p-8 text-white">
+      <div className="flex h-fit w-80 flex-col gap-4 p-8">
         <h1 className="text-2xl">{TitleAndContent?.title}</h1>
         <p>{TitleAndContent?.description}</p>
         <Button onClick={() => ModalStore.close()}>close</Button>
