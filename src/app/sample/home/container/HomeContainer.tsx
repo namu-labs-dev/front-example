@@ -6,19 +6,24 @@ export const HomeContainer = () => {
     void message.info("can't go back");
   };
 
+  const headerRightIconClicked = () => {
+    void message.info("can't go Settings");
+  };
+
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeHeaderModuleProps: {
-      title: "HomeHeaderModule",
-      onClickLeftIcon: headerLeftIconClicked,
+      headerProps: {
+        title: "Sample Home",
+        onClickLeftIcon: headerLeftIconClicked,
+        onClickRightIcon: headerRightIconClicked,
+      },
     },
     homeContentModuleProps: {
-      title: "HomeContentModule",
       sampleLinks: [
         "/sample/empty",
         "/sample/pageWithModal",
         "/sample/pageWithForm",
       ],
-      sampleNumbers: Array.from({ length: 100 }, (_, i) => i + 1),
     },
     homeFooterModuleProps: { title: "HomeFooterModule" },
   };
