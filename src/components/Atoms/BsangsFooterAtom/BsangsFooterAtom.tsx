@@ -1,7 +1,6 @@
 import SVGAtom from "../SVGAtom/SVGAtom";
 
 type Props = {
-  title: string;
   selectedButton?: string;
   onSelect?: (buttonName: string) => void;
 };
