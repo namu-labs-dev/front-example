@@ -1,11 +1,18 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { EmptyTemplate } from "~/components/Templates/Empty/EmptyTemplate";
 
 export const EmptyContainer = () => {
+  const router = useRouter();
+
   const emptyTemplateProps: React.ComponentProps<typeof EmptyTemplate> = {
     emptyHeaderModuleProps: {
       headerProps: {
         title: "Empty",
-        onClickLeftIcon: () => console.log("Left icon clicked"),
+        onClickLeftIcon: () => {
+          console.log("Left icon clicked");
+          router.back();
+        },
         onClickRightIcon: () => console.log("Right icon clicked"),
       },
     },
