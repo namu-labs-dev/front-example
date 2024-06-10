@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
-import { RootStyleRegistry } from "./RootStyleRegistry";
+import GlobalLayout from "./globalLayout";
 
 export const metadata = {
   title: "Frontend Sample",
@@ -18,7 +18,10 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body className="bg-[#efefef]">
         <div className="m-auto h-screen max-w-[500px] overflow-auto bg-white">
-          <RootStyleRegistry>{children}</RootStyleRegistry>
+          <GlobalLayout>{children}</GlobalLayout>
+          <div id="custom-toast" />
+          <div id="custom-drawer" />
+          <div id="custom-modal" />
         </div>
       </body>
     </html>
