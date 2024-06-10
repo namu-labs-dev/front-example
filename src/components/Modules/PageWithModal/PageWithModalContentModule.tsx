@@ -13,7 +13,7 @@ export const PageWithModalContentModule = (props: Props) => {
     <div className="flex h-full w-full justify-around">
       <div>
         <Button className="my-3" type="primary" onClick={props.onOpenModal}>
-          Open Modal
+          Open Snapshot Modal
         </Button>
       </div>
 
@@ -23,7 +23,7 @@ export const PageWithModalContentModule = (props: Props) => {
           type="primary"
           onClick={() => props.customModalProps.modalProps.setModalOpen(true)}
         >
-          Open Custom Modal
+          Open Modal
         </Button>
         <PageWithModalContentCustomModal {...props.customModalProps} />
       </div>
