@@ -2,17 +2,19 @@ import { Button } from "antd";
 import { PageWithModalContentCustomModal } from "~/components/Components/PageWithModalContentCustomModal/PageWithModalContentCustomModal";
 
 type Props = {
-  onOpenModal: () => void;
-  customModalProps: React.ComponentProps<
-    typeof PageWithModalContentCustomModal
-  >;
+  onOpenSnapshotModal: () => void;
+  modalProps: React.ComponentProps<typeof PageWithModalContentCustomModal>;
 };
 
 export const PageWithModalContentModule = (props: Props) => {
   return (
     <div className="flex h-full w-full justify-around">
       <div>
-        <Button className="my-3" type="primary" onClick={props.onOpenModal}>
+        <Button
+          className="my-3"
+          type="primary"
+          onClick={props.onOpenSnapshotModal}
+        >
           Open Snapshot Modal
         </Button>
       </div>
@@ -21,11 +23,11 @@ export const PageWithModalContentModule = (props: Props) => {
         <Button
           className="my-3"
           type="primary"
-          onClick={() => props.customModalProps.modalProps.setModalOpen(true)}
+          onClick={() => props.modalProps.modalProps.setModalOpen(true)}
         >
           Open Modal
         </Button>
-        <PageWithModalContentCustomModal {...props.customModalProps} />
+        <PageWithModalContentCustomModal {...props.modalProps} />
       </div>
     </div>
   );
