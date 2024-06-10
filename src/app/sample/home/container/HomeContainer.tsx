@@ -22,6 +22,8 @@ export const HomeContainer = () => {
       sampleLinks: [
         "/sample/empty",
         "/sample/pageWithModal",
+        "/sample/pageWithDrawer",
+        "/sample/pageWithToast",
         "/sample/pageWithForm",
       ],
     },

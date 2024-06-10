@@ -1,6 +1,6 @@
 export const HomeDescriptionModule = () => {
   return (
-    <div className="flex flex-col gap-2 text-[16px]">
+    <div className="flex flex-col gap-2">
       {/* 
         우리가 해외 개발자에게 원하는 최소 능력
           1. 우리의 페이지 구성 규칙을 이해하고, 이 규칙을 따라 요청 페이지를 제작하는 것
@@ -17,7 +17,7 @@ export const HomeDescriptionModule = () => {
         
           translate korean description to English and make markdown
         */}
-      <p className="flex flex-col gap-1 text-[14px]">
+      <div className="flex flex-col gap-1 text-[14px]">
         <b>Simple explanation of the roles of sample pages</b>
         <ol className="list-outside list-decimal pl-7">
           <li>
@@ -33,9 +33,9 @@ export const HomeDescriptionModule = () => {
             component, Form component
           </li>
         </ol>
-      </p>
+      </div>
 
-      <p className="flex flex-col gap-1 text-[14px]">
+      <div className="flex flex-col gap-1 text-[14px]">
         <b>Minimum ability we want from developers</b>
         <ol className="list-outside list-decimal pl-7">
           <li>
@@ -52,9 +52,9 @@ export const HomeDescriptionModule = () => {
             Link
           </li>
         </ol>
-      </p>
+      </div>
 
-      <p className="flex flex-col gap-1 text-[14px]">
+      <div className="flex flex-col gap-1 text-[14px]">
         <b>Maximum ability we want from developers</b>
         <ol className="list-outside list-decimal pl-7">
           <li>
@@ -68,7 +68,7 @@ export const HomeDescriptionModule = () => {
             you must write an explanation through comments)
           </li>
         </ol>
-      </p>
+      </div>
     </div>
   );
 };
