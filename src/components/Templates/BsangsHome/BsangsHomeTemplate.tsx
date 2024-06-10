@@ -9,7 +9,7 @@ type Props = {
 
 export default function BsangsHomeTemplate(props: Props) {
   return (
-    <Layout style={{ height: "100%" }}>
+    <Layout style={{ height: "100%", backgroundColor: "#1F1F1F" }}>
       <div className="sticky top-0">
         <BsangsHeaderAtom {...props.headerModuleProps} />
       </div>
