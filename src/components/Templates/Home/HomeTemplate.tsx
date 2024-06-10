@@ -3,6 +3,7 @@ import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
 import { HomeFooterModule } from "~/components/Modules/Home/HomeFooterModule";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
+import { HomeDescriptionModule } from "~/components/Modules/HomeDescription/HomeDescriptionModule";
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
@@ -17,8 +18,9 @@ export const HomeTemplate = (props: Props) => {
         <HomeHeaderModule {...props.homeHeaderModuleProps} />
       </Header>
 
-      <Content style={{ overflow: "auto" }}>
+      <Content style={{ overflow: "auto", padding: "20px" }}>
         <HomeContentModule {...props.homeContentModuleProps} />
+        <HomeDescriptionModule />
       </Content>
 
       <Footer style={{ padding: 0, minHeight: 50 }}>
