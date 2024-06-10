@@ -10,3 +10,4 @@ export { default as dollarCircle } from "./dollarCircle.svg";
 export { default as connectDapp } from "./connectDapp.svg";
 export { default as wallet } from "./wallet.svg";
 export { default as message } from "./message.svg";
+export { default as setting } from "./setting.svg";

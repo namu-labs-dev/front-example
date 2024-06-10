@@ -1,30 +1,42 @@
-import { SettingOutlined } from "@ant-design/icons";
 import SVGAtom from "../SVGAtom/SVGAtom";
 
 type Props = {
   title: string;
   onClickLeftIcon: () => void;
+  onClickRightIcon: () => void;
 };
 
 export const BsangsHeaderAtom = (props: Props) => {
   return (
-    <div className="flex h-full items-center justify-between bg-[#FFC96F]">
-      {/* Sample using custom svg */}
+    <div className="flex h-[50px] items-center justify-between bg-black text-white">
       <div
         className="flex h-full w-[50px] cursor-pointer items-center justify-center"
         onClick={props.onClickLeftIcon}
       >
-        <SVGAtom iconName="arrowLeft" width={20} height={20} color="#BFBFBF" />
+        <SVGAtom
+          iconName="connectDapp"
+          width={20}
+          height={20}
+          color="#BFBFBF"
+          className="overflow-visible"
+        />
       </div>
 
-      <div>{props.title}</div>
+      <span className="flex h-fit w-fit items-start justify-center whitespace-nowrap text-center text-[16px] leading-[26px] text-[#fff]">
+        {props.title}
+      </span>
 
-      {/* Sample using Antd icon */}
       <div
         className="flex h-full w-[50px] cursor-pointer items-center justify-center"
-        onClick={() => console.log("Antd icon clicked")}
+        onClick={props.onClickRightIcon}
       >
-        <SettingOutlined className="!text-gray-header cursor-pointer text-[20px]" />
+        <SVGAtom
+          iconName="setting"
+          width={20}
+          height={20}
+          color="#BFBFBF"
+          className="overflow-visible"
+        />
       </div>
     </div>
   );
