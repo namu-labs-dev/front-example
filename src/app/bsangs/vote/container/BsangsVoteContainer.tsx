@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsangsVoteTemplate } from "~/components/Templates/BsangsVote/BsangsVoteTemplate";
 
 export default function BsangsVoteContainer() {
@@ -6,6 +6,13 @@ export default function BsangsVoteContainer() {
   const [inputTitle, setInputTitle] = useState<string>();
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [inputDescription, setInputDescription] = useState<string>();
+  const [inputStartDate, setInputStartDate] = useState<any>();
+  const [inputDateString, setInputDateString] = useState<string>();
+
+  const onChangeDate = (date: any, dateString: string | string[]) => {
+    setInputStartDate(date);
+    setInputDateString(dateString as string);
+  };
 
   const voteTemplateProps: React.ComponentProps<typeof BsangsVoteTemplate> = {
     headerModuleProps: {
@@ -48,6 +55,13 @@ export default function BsangsVoteContainer() {
         placeholder: "Please write down a description of the event",
         value: inputDescription,
         onChange: (value) => setInputDescription(value),
+      },
+
+      labeledDatePickerProps: {
+        label: "Start",
+        placeholder: "Start Date",
+        onChange: onChangeDate,
+        value: inputStartDate,
       },
     },
   };

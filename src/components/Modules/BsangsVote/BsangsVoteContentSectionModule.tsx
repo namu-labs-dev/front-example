@@ -1,4 +1,5 @@
 import { ConfigProvider, type ThemeConfig } from "antd";
+import { LabeledDatePicker } from "~/components/Components/LabeledDatePicker/LabeledDatePicker";
 import { LabeledImageUpload } from "~/components/Components/LabeledImageUpload/LabeledImageUpload";
 import { LabeledInput } from "~/components/Components/LabeledInput/LabeledInput";
 import { LabeledSelect } from "~/components/Components/LabeledSelect/LabeledSelect";
@@ -9,6 +10,7 @@ type Props = {
   labeledInputProps: React.ComponentProps<typeof LabeledInput>;
   labeledImageUploadProps: React.ComponentProps<typeof LabeledImageUpload>;
   labeledTextAreaProps: React.ComponentProps<typeof LabeledTextArea>;
+  labeledDatePickerProps: React.ComponentProps<typeof LabeledDatePicker>;
 };
 
 const customTheme: ThemeConfig = {
@@ -31,6 +33,7 @@ export const BsangsVoteContentSectionModule = (props: Props) => {
         <LabeledInput {...props.labeledInputProps} />
         <LabeledImageUpload {...props.labeledImageUploadProps} />
         <LabeledTextArea {...props.labeledTextAreaProps} />
+        <LabeledDatePicker {...props.labeledDatePickerProps} />
       </div>
     </ConfigProvider>
   );
