@@ -19,7 +19,6 @@ export default function RootLayout({
       <body className="bg-[#efefef]">
         <div className="m-auto h-screen max-w-[500px] overflow-auto bg-white">
           <GlobalLayout>{children}</GlobalLayout>
-          <div id="custom-toast" />
           <div id="custom-drawer" />
           <div id="custom-modal" />
         </div>
