@@ -12,6 +12,8 @@ export default function BsangsHomeContainer() {
   >([]);
   const [messageListContents, setMessageListContents] = useState<any[]>([]);
 
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
   const fetchMessagesSectionContents = async () => {
     // dynamic import dummy data
     const { MESSAGE_SECTION_CONTENTS } = await import("./dummy");
@@ -26,6 +28,10 @@ export default function BsangsHomeContainer() {
     setMessageListContents(MESSAGE_LIST_CONTENTS);
   };
 
+  const setModalOpen = (isOpen: boolean) => {
+    setIsModalOpen(isOpen);
+  };
+
   useEffect(() => {
     void fetchMessagesSectionContents();
     void fetchMessageListContents();
@@ -35,7 +41,7 @@ export default function BsangsHomeContainer() {
     headerModuleProps: {
       title: "Proxima OS",
       onClickLeftIcon: () => alert("Connect"),
-      onClickRightIcon: () => alert("Setting"),
+      onClickRightIcon: () => setModalOpen(true),
     },
     footerModuleProps: {
       selectedButton: selectedButton,
@@ -48,6 +54,11 @@ export default function BsangsHomeContainer() {
 
     messageListModuleProps: {
       contents: messageListContents,
+    },
+
+    modalModuleProps: {
+      isOpen: isModalOpen,
+      onClickBackground: () => setModalOpen(false),
     },
   };
 
