@@ -15,7 +15,6 @@ export default function Bsangs() {
       />
 
       <BsangsFooterAtom
-        title="Good"
         selectedButton={selectedButton}
         onSelect={(buttonName) => setSelectedButton(buttonName)}
       />

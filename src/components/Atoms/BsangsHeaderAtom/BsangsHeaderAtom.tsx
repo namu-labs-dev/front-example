@@ -8,7 +8,7 @@ type Props = {
 
 export const BsangsHeaderAtom = (props: Props) => {
   return (
-    <div className="flex h-[50px] items-center justify-between bg-black text-white">
+    <div className="flex h-[50px] items-center justify-between bg-[#1f1f1f] text-white">
       <div
         className="flex h-full w-[50px] cursor-pointer items-center justify-center"
         onClick={props.onClickLeftIcon}

@@ -1,3 +1,4 @@
+"use client";
 import * as svgs from "public/svgs";
 import React from "react";
 
@@ -12,15 +13,14 @@ type Props = {
 };
 
 const SVGAtom = (props: Props) => {
-  console.log(svgs);
   return React.createElement(svgs[props.iconName], {
-    width: props.width ?? null,
-    height: props.height ?? null,
-    color: props.color ?? null,
-    onClick: props.onClick ?? null,
-    style: props.style ?? null,
-    className: props.className ?? null,
+    width: props.width ?? undefined,
+    height: props.height ?? undefined,
+    color: props.color ?? undefined,
+    onClick: props.onClick ?? undefined,
+    style: props.style ?? undefined,
+    className: props.className ?? undefined,
   });
 };
 
-export default React.memo(SVGAtom);
+export default SVGAtom;
