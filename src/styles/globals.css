@@ -72,3 +72,20 @@ a {
 .animate-fade-out {
   animation: fadeOut 0.3s ease-out forwards;
 }
+
+/* antd selector custom styles */
+.custom-select .ant-select-selector {
+  outline: none !important;
+}
+
+.custom-select .ant-select-selector:hover {
+  border-color: inherit !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.custom-select .ant-select-selector:focus {
+  border-color: inherit !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
