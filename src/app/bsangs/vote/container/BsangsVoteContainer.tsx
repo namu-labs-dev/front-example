@@ -4,6 +4,7 @@ import { BsangsVoteTemplate } from "~/components/Templates/BsangsVote/BsangsVote
 export default function BsangsVoteContainer() {
   const [selectCategory, setSelectCategory] = useState<string>();
   const [inputTitle, setInputTitle] = useState<string>();
+  const [imageFile, setImageFile] = useState<File | null>(null);
 
   const voteTemplateProps: React.ComponentProps<typeof BsangsVoteTemplate> = {
     headerModuleProps: {
@@ -34,6 +35,11 @@ export default function BsangsVoteContainer() {
         placeholder: "Title",
         value: inputTitle,
         onChange: (value) => setInputTitle(value),
+      },
+
+      labeledImageUploadProps: {
+        label: "Vote Image",
+        onChange: (file) => setImageFile(file),
       },
     },
   };
