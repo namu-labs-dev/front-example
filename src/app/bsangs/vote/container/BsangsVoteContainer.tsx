@@ -3,6 +3,7 @@ import { BsangsVoteTemplate } from "~/components/Templates/BsangsVote/BsangsVote
 
 export default function BsangsVoteContainer() {
   const [selectCategory, setSelectCategory] = useState<string>();
+  const [inputTitle, setInputTitle] = useState<string>();
 
   const voteTemplateProps: React.ComponentProps<typeof BsangsVoteTemplate> = {
     headerModuleProps: {
@@ -25,7 +26,14 @@ export default function BsangsVoteContainer() {
         ],
         value: selectCategory,
         placeholder: "Birthday AD",
-        onChange: (value) => console.log(value),
+        onChange: (value) => setSelectCategory(value),
+      },
+
+      labeledInputProps: {
+        label: "Vote Title",
+        placeholder: "Title",
+        value: inputTitle,
+        onChange: (value) => setInputTitle(value),
       },
     },
   };
