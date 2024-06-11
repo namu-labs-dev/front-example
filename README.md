@@ -37,16 +37,18 @@
   - This is part of our process
   - You can ask question after your misssion is completed
 - Step 1.
+  - Request your github account to be invited
+- Step 2.
   - Analyze the given code pattern
   - Understand the structure and functionality of the code
-- Step 2.
+- Step 3.
   - Create a folder with a short name under the `/app` directory.
   - Example: `/app/david`
   - make your own branch from dev
     - git checkout dev
     - (dev) git checkout -b david
     - (david) git push origin david
-- Step 3.
+- Step 4.
   - Create one Pull Request (PR) for each route
   - /app/david/testPage1
     - branchName : david_testPage1
