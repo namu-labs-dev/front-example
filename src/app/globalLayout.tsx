@@ -3,6 +3,7 @@
 import SnapshotModal from "~/components/Atoms/Modal/SnapshotModal";
 import { RootStyleRegistry } from "./RootStyleRegistry";
 import SnapshotDrawerAtom from "~/components/Atoms/DrawerAtom/SnapshotDrawerAtom";
+import { SnapshotToastAtom } from "~/components/Atoms/ToastAtom/SnapshotToastAtom";
 
 export default function GlobalLayout({
   children,
@@ -16,6 +17,7 @@ export default function GlobalLayout({
       </div>
       <SnapshotDrawerAtom />
       <SnapshotModal />
+      <SnapshotToastAtom />
     </>
   );
 }

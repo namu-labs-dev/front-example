@@ -1,7 +1,9 @@
+import { HeaderAtom } from "~/components/Atoms/HeaderAtom/HeaderAtom";
+
 type Props = {
-  title: string;
+  headerProps: React.ComponentProps<typeof HeaderAtom>;
 };
 
 export const PageWithToastHeaderModule = (props: Props) => {
-  return <div>{props.title}</div>;
+  return <HeaderAtom {...props.headerProps} />;
 };
