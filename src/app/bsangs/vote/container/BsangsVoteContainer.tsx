@@ -14,6 +14,10 @@ export default function BsangsVoteContainer() {
     setInputDateString(dateString as string);
   };
 
+  const onClickVote = async () => {
+    alert("Vote Created");
+  };
+
   const voteTemplateProps: React.ComponentProps<typeof BsangsVoteTemplate> = {
     headerModuleProps: {
       title: "Vote",
@@ -63,6 +67,11 @@ export default function BsangsVoteContainer() {
         onChange: onChangeDate,
         value: inputStartDate,
       },
+    },
+
+    footerModuleProps: {
+      text: "Create Vote",
+      onClick: onClickVote,
     },
   };
 
