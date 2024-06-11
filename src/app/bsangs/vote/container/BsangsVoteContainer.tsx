@@ -5,6 +5,7 @@ export default function BsangsVoteContainer() {
   const [selectCategory, setSelectCategory] = useState<string>();
   const [inputTitle, setInputTitle] = useState<string>();
   const [imageFile, setImageFile] = useState<File | null>(null);
+  const [inputDescription, setInputDescription] = useState<string>();
 
   const voteTemplateProps: React.ComponentProps<typeof BsangsVoteTemplate> = {
     headerModuleProps: {
@@ -40,6 +41,13 @@ export default function BsangsVoteContainer() {
       labeledImageUploadProps: {
         label: "Vote Image",
         onChange: (file) => setImageFile(file),
+      },
+
+      labeledTextAreaProps: {
+        label: "Description",
+        placeholder: "Please write down a description of the event",
+        value: inputDescription,
+        onChange: (value) => setInputDescription(value),
       },
     },
   };
