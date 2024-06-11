@@ -4,11 +4,12 @@ import { CameraOutlined } from "@ant-design/icons";
 import type { RcFile } from "antd/es/upload/interface";
 import Image from "next/image";
 import styled from "@emotion/styled";
+import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 
 const UploadContainer = styled.div`
   .ant-upload {
     width: 100% !important;
-    height: 360px !important;
+    height: 184px !important;
     border: none !important;
     border-radius: 9px !important;
     display: flex !important;
@@ -41,8 +42,8 @@ export const LabeledImageUpload = (props: Props) => {
   };
 
   const uploadButton = (
-    <div className="flex h-[360px] w-full items-center justify-center rounded-[9px] border-[1px] border-[#D9D9D9] bg-gray-100">
-      <CameraOutlined style={{ fontSize: "32px", color: "#999" }} />
+    <div className="flex h-[184px] w-full items-center justify-center rounded-[9px] border-none bg-[#F5F5F5]">
+      <SVGAtom iconName="camera" height={16} width={19} />
     </div>
   );
 
@@ -60,7 +61,7 @@ export const LabeledImageUpload = (props: Props) => {
         onChange={handleChange}
       >
         {imageUrl ? (
-          <div className="relative h-[360px] w-full">
+          <div className="relative h-[184px] w-full">
             <Image
               src={imageUrl}
               alt="avatar"
