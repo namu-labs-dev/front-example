@@ -1,6 +1,6 @@
 import { Flex } from "antd";
 import Image from "next/image";
-import { WalletInfo } from "~/components/ZainahContentComponent/ZainahContentComponent";
+import { WalletInfo } from "~/components/Components/ZainahContentComponent/ZainahContentComponent";
 
 interface Props {
   contentClicked: boolean;

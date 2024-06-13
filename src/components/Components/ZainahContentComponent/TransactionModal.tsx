@@ -13,7 +13,7 @@ export const TransactionModal: React.FC<Props> = ({ transactionDetails }) => {
     >
       <div className="text-center text-3xl">{transactionDetails.title}</div>
 
-      <Image src="/svgs/cube.svg" alt="" width={150} height={150} />
+      <Image src="/cube.png" alt="" width={150} height={150} />
 
       <div className="text-center">{transactionDetails.desc}</div>
     </div>
