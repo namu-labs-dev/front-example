@@ -4,7 +4,7 @@ import { type TitleAndContentDrawerProps } from "~/views/drawer/TitleAndContentD
 type ViewType = "TitleAndContent";
 
 type DataType = {
-  TitleAndContent: TitleAndContentDrawerProps;
+  TitleAndContent?: TitleAndContentDrawerProps;
 };
 
 type State = {
