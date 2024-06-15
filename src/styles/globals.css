@@ -41,11 +41,37 @@ a {
     transform: translateX(-50%) translateY(100%);
   }
 }
+.custom-light{
+  color: #BFBFBF;
+} 
+.white{
+  color: #ffffff;
+} 
+.header-text{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
 
+}
+.nav-icon-disabled{
+  color: #8C8C8C;
+}
+.nav{
+padding: 18px 28px 18px 28px;
+gap: 10px;
+}
+.nav-active{
+border: 2px 0px 0px 0px;
+/* opacity: 0px; */
+border-top: 2px solid #00EC97;
+}
 .drawer-slide-down {
   animation: slideDown 0.3s ease-in-out forwards;
 }
-
+.w-custom {
+    width: 340px/* 320px */;
+}
 /* Drawer BG Animation */
 @keyframes fadeIn {
   from {

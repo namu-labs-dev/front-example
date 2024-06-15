@@ -38,6 +38,6 @@
     "**/*.js",
     ".next/types/**/*.ts",
     "autogen.ts"
-  ],
+, "src/components/Modules/TestPage1"  ],
   "exclude": ["node_modules", "public"]
 }

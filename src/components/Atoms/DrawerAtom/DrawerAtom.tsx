@@ -62,9 +62,9 @@ const DrawerAtom = (props: PropsWithChildren<Props>) => {
     (props.isDrawerOpen || isAnimating) &&
     ReactDOM.createPortal(
       <>
-        <div className="fixed inset-0 z-[1000] box-border overflow-auto text-center">
+        <div className="  box-border overflow-auto text-center">
           <div
-            className={`fixed h-full w-full cursor-pointer bg-black opacity-50 transition-opacity duration-500 ease-in-out ${isAnimating ? "animate-fade-out" : "animate-fade-in"}`}
+            className={` h-full w-full cursor-pointer bg-black opacity-50 transition-opacity duration-500 ease-in-out ${isAnimating ? "animate-fade-out" : "animate-fade-in"}`}
             onClick={() => onClose()}
           />
           <DrawerContainerAtom
