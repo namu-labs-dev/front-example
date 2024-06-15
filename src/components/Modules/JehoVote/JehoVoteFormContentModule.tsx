@@ -38,7 +38,7 @@ const JehoVoteFormContentModule = (props: Props) => {
         <FormImageUpload {...props.formImageUpload} />
         <FormDescription {...props.formDescription} />
         <FormDate {...props.formDate} />
-        <JehoVoteFooterModule />
+        {/* <JehoVoteFooterModule /> */}
       </Form>
     </div>
   );
