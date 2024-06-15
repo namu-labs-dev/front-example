@@ -1,12 +1,13 @@
 import { message } from "antd";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { JehoHomeTemplate } from "~/components/Templates/JehoHome/JehoHomeTemplate";
 
 export const JehoHomeContainer = () => {
   const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
+  const router = useRouter();
   const headerLeftIconClicked = () => {
-    setIsCustomModalOpen(true);
-    console.log(isCustomModalOpen);
+    void router.push("/jeho/vote");
   };
 
   const headerRightIconClicked = () => {
@@ -22,13 +23,7 @@ export const JehoHomeContainer = () => {
       },
     },
     homeContentModuleProps: {
-      sampleLinks: [
-        "/sample/empty",
-        "/sample/pageWithModal",
-        "/sample/pageWithDrawer",
-        "/sample/pageWithToast",
-        "/sample/pageWithForm",
-      ],
+      onClick: setIsCustomModalOpen,
     },
     homeFooterModuleProps: { title: "HomeFooterModule" },
     transactionModalProps: {

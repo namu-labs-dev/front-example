@@ -1,9 +1,9 @@
-import { HeaderAtom } from "~/components/Atoms/HeaderAtom/HeaderAtom";
+import { JehoHeaderAtom } from "~/components/Atoms/JehoHeaderAtom/JehoHeaderAtom";
 
 type Props = {
-  headerProps: React.ComponentProps<typeof HeaderAtom>;
+  headerProps: React.ComponentProps<typeof JehoHeaderAtom>;
 };
 
 export const JehoHomeHeaderModule = (props: Props) => {
-  return <HeaderAtom {...props.headerProps} />;
+  return <JehoHeaderAtom {...props.headerProps} />;
 };

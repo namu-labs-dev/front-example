@@ -1,9 +1,9 @@
-import { FooterAtom } from "~/components/Atoms/FooterAtom/FooterAtom";
+import { JehoFooterAtom } from "~/components/Atoms/JehoFooterAtom/JehoFooterAtom";
 
 type Props = {
   title: string;
 };
 
 export const JehoHomeFooterModule = (props: Props) => {
-  return <FooterAtom title={props.title} />;
+  return <JehoFooterAtom title={props.title} />;
 };
