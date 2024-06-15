@@ -1,19 +1,22 @@
 import { message } from "antd";
-import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+import { useState } from "react";
+import { JehoHomeTemplate } from "~/components/Templates/JehoHome/JehoHomeTemplate";
 
 export const JehoHomeContainer = () => {
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
   const headerLeftIconClicked = () => {
-    void message.info("can't go back");
+    setIsCustomModalOpen(true);
+    console.log(isCustomModalOpen);
   };
 
   const headerRightIconClicked = () => {
     void message.info("can't go Settings");
   };
 
-  const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
+  const homeTemplateProps: React.ComponentProps<typeof JehoHomeTemplate> = {
     homeHeaderModuleProps: {
       headerProps: {
-        title: "Sample Home",
+        title: "Proxima OS",
         onClickLeftIcon: headerLeftIconClicked,
         onClickRightIcon: headerRightIconClicked,
       },
@@ -28,7 +31,11 @@ export const JehoHomeContainer = () => {
       ],
     },
     homeFooterModuleProps: { title: "HomeFooterModule" },
+    transactionModalProps: {
+      isModalOpen: isCustomModalOpen,
+      setModalOpen: setIsCustomModalOpen,
+    },
   };
 
-  return <HomeTemplate {...homeTemplateProps} />;
+  return <JehoHomeTemplate {...homeTemplateProps} />;
 };
