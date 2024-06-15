@@ -27,7 +27,7 @@ export const JehoHomeTemplate = (props: Props) => {
           height: "100%",
         }}
       >
-        <JehoHomeContentModule {...props.homeContentModuleProps} />
+        <JehoHomeContentModule />
         <TransactionModal {...props.transactionModalProps} />
       </Content>
 

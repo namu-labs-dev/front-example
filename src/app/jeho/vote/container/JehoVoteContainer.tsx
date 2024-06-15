@@ -1,8 +1,4 @@
-import { message } from "antd";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { JehoVoteTemplate } from "~/components/Templates/JehoVote/JehoVoteTemplate";
-// import { JehoHomeTemplate } from "~/components/Templates/JehoHome/JehoHomeTemplate";
 
 export const JehoVoteContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof JehoVoteTemplate> = {

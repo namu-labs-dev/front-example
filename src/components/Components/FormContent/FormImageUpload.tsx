@@ -1,5 +1,5 @@
 import { CameraFilled, CameraOutlined } from "@ant-design/icons";
-import { Form, Upload, UploadProps, message } from "antd";
+import { Form, type UploadProps, message } from "antd";
 import Dragger from "antd/es/upload/Dragger";
 import React from "react";
 type Props = {

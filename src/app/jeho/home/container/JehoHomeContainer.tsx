@@ -7,11 +7,11 @@ export const JehoHomeContainer = () => {
   const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
   const router = useRouter();
   const headerLeftIconClicked = () => {
-    void router.push("/jeho/vote");
+    void message.info("connect");
   };
 
   const headerRightIconClicked = () => {
-    void message.info("can't go Settings");
+    setIsCustomModalOpen(true);
   };
 
   const homeTemplateProps: React.ComponentProps<typeof JehoHomeTemplate> = {

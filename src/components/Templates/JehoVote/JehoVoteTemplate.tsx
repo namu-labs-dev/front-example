@@ -1,7 +1,5 @@
 import { Layout } from "antd";
-import { Content, Footer, Header } from "antd/es/layout/layout";
 import JehoVoteBannerModule from "~/components/Modules/JehoVote/JehoVoteBannerModule";
-import JehoVoteFooterModule from "~/components/Modules/JehoVote/JehoVoteFooterModule";
 import JehoVoteFormContentModule from "~/components/Modules/JehoVote/JehoVoteFormContentModule";
 import JehoVoteHeaderModule from "~/components/Modules/JehoVote/JehoVoteHeaderModule";
 
