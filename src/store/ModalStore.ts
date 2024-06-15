@@ -4,7 +4,7 @@ import type { TitleAndContentModalProps } from "~/views/modal/TitleAndContentMod
 type ViewType = "TitleAndContent";
 
 type DataType = {
-  TitleAndContent: TitleAndContentModalProps;
+  TitleAndContent?: TitleAndContentModalProps;
 };
 
 type State = {
