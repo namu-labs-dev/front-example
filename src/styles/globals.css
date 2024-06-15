@@ -72,3 +72,11 @@ a {
 .animate-fade-out {
   animation: fadeOut 0.3s ease-out forwards;
 }
+
+/* vera styles */
+body {
+  background-color: #000;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
