@@ -4,23 +4,39 @@ import { useState } from "react";
 import { JehoVoteTemplate } from "~/components/Templates/JehoVote/JehoVoteTemplate";
 // import { JehoHomeTemplate } from "~/components/Templates/JehoHome/JehoHomeTemplate";
 
-export const JehoHomeContainer = () => {
+export const JehoVoteContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof JehoVoteTemplate> = {
-    // homeHeaderModuleProps: {
-    //   headerProps: {
-    //     title: "Proxima OS",
-    //     onClickLeftIcon: headerLeftIconClicked,
-    //     onClickRightIcon: headerRightIconClicked,
-    //   },
-    // },
-    // homeContentModuleProps: {
-    //   onClick: setIsCustomModalOpen,
-    // },
-    // homeFooterModuleProps: { title: "HomeFooterModule" },
-    // transactionModalProps: {
-    //   isModalOpen: isCustomModalOpen,
-    //   setModalOpen: setIsCustomModalOpen,
-    // },
+    headerModuleProps: {
+      title: "Vote",
+    },
+    formContentModuleProps: {
+      formCategory: {
+        label: "Category",
+        category: [
+          { value: "clement", label: "Clement" },
+          { value: "tobi", label: "Tobi" },
+          { value: "fortune", label: "Fortune" },
+          { value: "seun", label: "Seun" },
+        ],
+        name: "category",
+      },
+      formDate: {
+        label: "Start",
+        name: "date",
+      },
+      formTitle: {
+        label: "Vote Title",
+        name: "title",
+      },
+      formDescription: {
+        label: "Description",
+        name: "description",
+      },
+      formImageUpload: {
+        label: "Image",
+        name: "image",
+      },
+    },
   };
 
   return <JehoVoteTemplate {...homeTemplateProps} />;

@@ -1,8 +1,8 @@
 "use client";
-import { JehoHomeContainer } from "./container/JehoVoteContainer";
+import { JehoVoteContainer } from "./container/JehoVoteContainer";
 
 const Home = () => {
-  return <JehoHomeContainer />;
+  return <JehoVoteContainer />;
 };
 
 export default Home;
