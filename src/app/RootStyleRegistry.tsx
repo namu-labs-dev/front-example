@@ -18,3 +18,5 @@ export const RootStyleRegistry = ({ children }: PropsWithChildren) => {
 
   return <StyleProvider cache={cache}>{children}</StyleProvider>;
 };
+
+// bg-[#FFC96F]

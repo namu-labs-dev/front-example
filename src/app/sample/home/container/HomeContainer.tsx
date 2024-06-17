@@ -27,7 +27,7 @@ export const HomeContainer = () => {
         "/sample/pageWithForm",
       ],
     },
-    homeFooterModuleProps: { title: "HomeFooterModule" },
+    homeFooterModuleProps: { children: "HomeFooterModule" },
   };
 
   return <HomeTemplate {...homeTemplateProps} />;

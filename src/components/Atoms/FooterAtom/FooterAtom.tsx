@@ -1,11 +1,16 @@
+import clsx from "clsx";
+import React from "react";
 type Props = {
-  title: string;
+  children: string | React.ReactNode;
+  footerClass?: string
+  footerChildClass?: string
 };
 
+//conditionally applying classnames using clsx to enhance reusability and dynamic styling
 export const FooterAtom = (props: Props) => {
   return (
-    <div className="flex h-full items-center justify-center bg-[#FFC96F]">
-      <div>{props.title}</div>
+    <div className={clsx(props.footerClass, "flex h-full items-center justify-center bg-[#FFC96F]")}>
+      <div className={clsx(props.footerClass, "")}>{props.children}</div>
     </div>
   );
 };

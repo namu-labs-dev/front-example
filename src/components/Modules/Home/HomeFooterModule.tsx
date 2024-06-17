@@ -1,9 +1,11 @@
 import { FooterAtom } from "~/components/Atoms/FooterAtom/FooterAtom";
 
 type Props = {
-  title: string;
+  children: string | React.ReactNode;
+  footerClass?: string;
+  footerChildClass?: string
 };
 
 export const HomeFooterModule = (props: Props) => {
-  return <FooterAtom title={props.title} />;
+  return <FooterAtom children={props.children} footerClass={props.footerClass} footerChildClass={props.footerChildClass}/>;
 };
