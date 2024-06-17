@@ -1,7 +1,8 @@
 export const InfoToast = ({ message }: { message: string }) => {
   return (
-    <div className="flex w-full rounded-md bg-slate-50 p-5 shadow-md">
-      <p className="whitespace-pre-wrap text-[14px] leading-[18px]">
+    <div className="flex w-full  bg-[#F0F5FF] p-5 ">
+      <p className="whitespace-pre-wrap text-[17.58px] leading-[28.57px] ">
+        <span className="font-bold text-[#2F54EB] ">10 FAO </span>
         {message}
       </p>
     </div>

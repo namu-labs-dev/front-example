@@ -9,7 +9,7 @@ type Props = {
 
 export const HeaderAtom = (props: Props) => {
   return (
-    <div className="relative flex h-full w-full items-center justify-center bg-[#FFC96F]">
+    <div className="relative flex h-full w-full items-center justify-center bg-[#FFFF]">
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (
         <div
@@ -20,7 +20,9 @@ export const HeaderAtom = (props: Props) => {
         </div>
       )}
 
-      <div>{props.title}</div>
+      <div className="font-inter text-center text-[18.68px] font-bold leading-[2.376px] text-black">
+        {props.title}
+      </div>
 
       {/* Sample using Antd icon */}
       {props.onClickRightIcon && (

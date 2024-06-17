@@ -17,6 +17,12 @@
 a {
   color: black !important;
 }
+label{
+font-size: 16.48px;
+font-weight: 500;
+line-height: 19.95px;
+
+}
 /* Set Link Color : End */
 
 /* Drawer Animation */

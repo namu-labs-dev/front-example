@@ -18,7 +18,7 @@ export const PageWithToastContainer = () => {
     },
     pageWithToastExampleModuleProps: {
       onClickToastButton: () => {
-        ToastStore.info("This is a toast message.");
+        ToastStore.info("noooo.");
       },
     },
   };

@@ -34,6 +34,7 @@ const ToastStore = {
   info(text: string) {
     this.addToast("info", { infoData: text });
   },
+
 };
 
 export default ToastStore;

@@ -20,7 +20,7 @@ export const SnapshotToastAtom = () => {
   return (
     <>
       {queue.length === 0 ? null : (
-        <div className="pointer-events-none absolute left-[50%] top-0 z-[2000] flex h-fit w-full max-w-page translate-x-[-50%] flex-col-reverse items-center gap-3 p-5">
+        <div className="pointer-events-none absolute left-[50%] top-12 z-[2000] flex h-fit w-full max-w-page translate-x-[-50%] flex-col-reverse items-center gap-3 ">
           {renderToastList}
         </div>
       )}
