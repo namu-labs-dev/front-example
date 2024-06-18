@@ -8,11 +8,13 @@ import {
 } from "react";
 import ReactDOM from "react-dom";
 import { DrawerContainerAtom } from "../DrawerContainerAtom/DrawerContainerAtom";
+import clsx from "clsx";
 
 type Props = {
   isDrawerOpen: boolean;
   setIsDrawerOpen: (value: boolean) => void;
   containerClassName?: string;
+  className?: string;
 };
 
 const DrawerAtom = (props: PropsWithChildren<Props>) => {
@@ -25,20 +27,18 @@ const DrawerAtom = (props: PropsWithChildren<Props>) => {
   const onClose = useCallback(() => {
     props.setIsDrawerOpen(false);
     setIsAnimating(true);
-  }, []);
+  }, [props]);
 
   useEffect(() => {
     const container = document.createElement("div");
     const modalRoot = document.getElementById("custom-drawer");
     if (modalRoot) {
-      modalRoot?.appendChild(container);
+      modalRoot.appendChild(container);
       setModalContainer(container);
     }
 
     return () => {
-      if (modalRoot) {
-        modalRoot?.removeChild(container);
-      }
+      modalRoot?.removeChild(container);
     };
   }, []);
 
@@ -61,20 +61,24 @@ const DrawerAtom = (props: PropsWithChildren<Props>) => {
     modalContainer &&
     (props.isDrawerOpen || isAnimating) &&
     ReactDOM.createPortal(
-      <>
-        <div className="fixed inset-0 z-[1000] box-border overflow-auto text-center">
-          <div
-            className={`fixed h-full w-full cursor-pointer bg-black opacity-50 transition-opacity duration-500 ease-in-out ${isAnimating ? "animate-fade-out" : "animate-fade-in"}`}
-            onClick={() => onClose()}
-          />
-          <DrawerContainerAtom
-            className={props.containerClassName}
-            isOpen={props.isDrawerOpen}
-          >
-            {props.children}
-          </DrawerContainerAtom>
-        </div>
-      </>,
+      <div className="fixed inset-0 z-[100] box-border overflow-auto text-center">
+        <div
+          className={clsx(
+            "fixed h-full w-full cursor-pointer bg-black transition-opacity duration-500 ease-in-out",
+            {
+              "animate-fade-in opacity-50": props.isDrawerOpen && !isAnimating,
+              "animate-fade-out opacity-0": !props.isDrawerOpen && isAnimating,
+            },
+          )}
+          onClick={onClose}
+        />
+        <DrawerContainerAtom
+          className={props.containerClassName}
+          isOpen={props.isDrawerOpen}
+        >
+          {props.children}
+        </DrawerContainerAtom>
+      </div>,
       modalContainer,
     )
   );

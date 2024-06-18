@@ -9,3 +9,4 @@ export { default as dollarIcon } from "./dollar-icon.svg";
 export { default as messageIcon } from "./message-icon.svg";
 export { default as walletIcon } from "./wallet-icon.svg";
 export { default as historyIcon } from "./history-icon.svg";
+export { default as proximaIcon } from "./proxima-icon.svg";
