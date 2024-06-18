@@ -33,6 +33,9 @@ export const EkanVoteContainer = () => {
         label: "Start",
         name: "date",
       },
+      formSubmit: {
+        label: "Create Vote",
+      },
     },
   };
 
