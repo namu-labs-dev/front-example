@@ -1,7 +1,5 @@
-type Props = {
-      // Add props here
-    };
+type Props = {};
 
 export const EmptyContentAtom = (props: Props) => {
-  return (<div>EmptyContentAtom</div>);
+  return <div>EmptyContentAtom</div>;
 };

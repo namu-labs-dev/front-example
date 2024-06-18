@@ -3,6 +3,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   content: ["./src/**/*.tsx"],
+  mode: "jit",
   theme: {
     extend: {
       fontFamily: {
@@ -10,6 +11,7 @@ export default {
       },
       spacing: {
         page: "500px",
+        "22": "5.5rem",
       },
       keyframes: {
         shimmer: {

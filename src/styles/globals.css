@@ -72,3 +72,13 @@ a {
 .animate-fade-out {
   animation: fadeOut 0.3s ease-out forwards;
 }
+
+/* Nav items styles start here */
+.nav_item path {
+  fill: #8c8c8c;
+  transition: all 0.35s linear;
+}
+.nav_item--active path {
+  fill: #ffffff;
+  transition: all 0.35s linear;
+}
