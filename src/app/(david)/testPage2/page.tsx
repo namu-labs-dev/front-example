@@ -1,10 +1,15 @@
 import React from "react";
 import { TESTPAGE2CONTAINER } from "~/components/Containers";
+import { NavProvider } from "~/providers";
 
 type Props = {};
 
 const HomeOnClickSettingsIcon = (props: Props) => {
-  return <TESTPAGE2CONTAINER />;
+  return (
+    <NavProvider>
+      <TESTPAGE2CONTAINER />
+    </NavProvider>
+  );
 };
 
 export default HomeOnClickSettingsIcon;

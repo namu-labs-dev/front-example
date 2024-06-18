@@ -78,6 +78,10 @@ a {
   fill: #8c8c8c;
   transition: all 0.35s linear;
 }
+.nav_item:hover path {
+  fill: #ffffff;
+  transition: all 0.35s linear;
+}
 .nav_item--active path {
   fill: #ffffff;
   transition: all 0.35s linear;

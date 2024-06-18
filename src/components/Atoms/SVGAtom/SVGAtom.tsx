@@ -8,10 +8,16 @@ type Props = {
   style?: React.CSSProperties;
   className?: string;
   size?: "sm" | "md" | "lg";
+  width?: number;
+  height?: number;
 };
 
 const SVGAtom = (props: Props) => {
   const getSize = () => {
+    if (props.width && props.height) {
+      return { width: props.width, height: props.height };
+    }
+
     switch (props.size) {
       case "sm":
         return { width: 18, height: 18 };
@@ -20,7 +26,7 @@ const SVGAtom = (props: Props) => {
       case "lg":
         return { width: 36, height: 36 };
       default:
-        return { width: 24, height: 24 };
+        return { width: 24, height: 24 }; // Default to medium size
     }
   };
 

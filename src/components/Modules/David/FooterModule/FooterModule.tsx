@@ -2,16 +2,13 @@
 import clsx from "clsx";
 import React, { useState } from "react";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
+import { useNavContext } from "~/providers";
 import { footerNavigation } from "~/utils/data";
 
 type Props = {};
 
 const FooterModule = (props: Props) => {
-  const initialActiveIndex = footerNavigation.findIndex((item) => item.active);
-
-  const [activeIndex, setActiveIndex] = useState<number>(
-    initialActiveIndex !== -1 ? initialActiveIndex : 0,
-  );
+  const { activeIndex, setActiveIndex } = useNavContext();
 
   const handleIconClick = (index: number) => {
     setActiveIndex(index);
