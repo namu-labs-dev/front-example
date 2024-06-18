@@ -20,7 +20,7 @@ const config = {
     return [
       {
         source: "/",
-        destination: "/ekan/testPage1/home",
+        destination: "/ekan/testPage2/vote",
         permanent: false,
       },
     ];
