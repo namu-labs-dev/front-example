@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HOMEMODULE } from "~/components/Modules/David";
+import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import { TestPageTemplate } from "~/components/Templates/David";
 import { useNavContext } from "~/providers";
 
@@ -22,7 +22,16 @@ const TestPage1 = (props: Props) => {
             <h2 className="text-white">Nothing to see here</h2>
           </>
         ) : activeIndex === 2 ? (
-          <HOMEMODULE activeIndex={activeIndex} />
+          <div className="flex flex-col items-start justify-start">
+            <h1 className="mb-6 text-2xl font-semibold">Messages</h1>
+            <SVGAtom
+              iconName="proximaIcon"
+              width={65}
+              height={65}
+              className="cursor-pointer"
+            />
+            <p className="mt-2 text-base">Proxima</p>
+          </div>
         ) : (
           <>
             <h2 className="text-white">No history</h2>
