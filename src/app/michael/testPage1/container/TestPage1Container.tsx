@@ -1,7 +1,13 @@
 import { message } from "antd";
+import { useState } from "react";
 import { TestPage1Template } from "~/components/Templates/TestPage1/TestPage1Template";
 
+export type FooterTabs = "dollarFill" | "message" | "wallet" | "history";
+
 export const TestPage1Container = () => {
+  const [ currentTab, setCurrentTab ] = useState<number>(2);
+  const tabs: FooterTabs[] = ["dollarFill", "message", "wallet", "history"];
+
   const headerLeftIconClicked = () => {
     void message.info("can't go back");
   };
@@ -10,10 +16,15 @@ export const TestPage1Container = () => {
     void message.info("can't go Settings");
   };
 
+  const changeTab = (tabIndex: number) => {
+    setCurrentTab(tabIndex);
+  };
+
+
   const testPage1TemplateProps: React.ComponentProps<typeof TestPage1Template> = {
     testPage1HeaderModuleProps: {
       headerProps: {
-        title: "Sample Home",
+        title: "Proxima OS",
         onClickLeftIcon: headerLeftIconClicked,
         onClickRightIcon: headerRightIconClicked,
       },
@@ -27,7 +38,7 @@ export const TestPage1Container = () => {
         "/sample/pageWithForm",
       ],
     },
-    homeFooterModuleProps: { title: "HomeFooterModule" },
+    testPage1FooterModuleProps: {changeTab: changeTab, tabs: tabs, currentTab: currentTab },
   };
 
   return <TestPage1Template {...testPage1TemplateProps} />;
