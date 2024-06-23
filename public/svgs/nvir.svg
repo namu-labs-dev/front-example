@@ -2,7 +2,7 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <g filter="url(#filter0_d_940_65)">
-        <circle cx="36" cy="37" r="22" fill="url(#pattern0_940_65)"/>
+        <circle cx="22" cy="22" r="22" fill="url(#pattern0_940_65)"/>
     </g>
     <defs>
         <filter id="filter0_d_940_65" x="-6" y="-5" width="92" height="92" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
