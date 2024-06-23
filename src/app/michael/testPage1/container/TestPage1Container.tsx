@@ -5,7 +5,7 @@ import { TestPage1Template } from "~/components/Templates/TestPage1/TestPage1Tem
 export type FooterTabs = "dollarFill" | "message" | "wallet" | "history";
 
 export const TestPage1Container = () => {
-  const [ currentTab, setCurrentTab ] = useState<number>(2);
+  const [currentTab, setCurrentTab] = useState<number>(2);
   const tabs: FooterTabs[] = ["dollarFill", "message", "wallet", "history"];
 
   const headerLeftIconClicked = () => {
@@ -20,26 +20,39 @@ export const TestPage1Container = () => {
     setCurrentTab(tabIndex);
   };
 
-
-  const testPage1TemplateProps: React.ComponentProps<typeof TestPage1Template> = {
-    testPage1HeaderModuleProps: {
-      headerProps: {
-        title: "Proxima OS",
-        onClickLeftIcon: headerLeftIconClicked,
-        onClickRightIcon: headerRightIconClicked,
+  const testPage1TemplateProps: React.ComponentProps<typeof TestPage1Template> =
+    {
+      testPage1HeaderModuleProps: {
+        headerProps: {
+          title: "Proxima OS",
+          onClickLeftIcon: headerLeftIconClicked,
+          onClickRightIcon: headerRightIconClicked,
+        },
       },
-    },
-    homeContentModuleProps: {
-      sampleLinks: [
-        "/sample/empty",
-        "/sample/pageWithModal",
-        "/sample/pageWithDrawer",
-        "/sample/pageWithToast",
-        "/sample/pageWithForm",
-      ],
-    },
-    testPage1FooterModuleProps: {changeTab: changeTab, tabs: tabs, currentTab: currentTab },
-  };
+      testPage1ContentModuleProps: {
+        messages: [
+          {
+            from: "ETH",
+            message:
+              "User: namulabs is fantasic company. I would love to work there.",
+            recievedAt: "08:43 PM",
+            hasBadge: true,
+          },
+          {
+            from: "Nvir",
+            message:
+              "User: namulabs is fantasic company. I would love to work there.",
+            recievedAt: "08:42 AM",
+            hasBadge: false,
+          },
+        ],
+      },
+      testPage1FooterModuleProps: {
+        changeTab: changeTab,
+        tabs: tabs,
+        currentTab: currentTab,
+      },
+    };
 
   return <TestPage1Template {...testPage1TemplateProps} />;
 };
