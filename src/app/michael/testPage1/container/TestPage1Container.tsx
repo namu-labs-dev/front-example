@@ -34,14 +34,14 @@ export const TestPage1Container = () => {
           {
             from: "ETH",
             message:
-              "User: namulabs is fantasic company. I would love to work there.",
+              "namulabs is fantasic company. I would love to work there.",
             recievedAt: "08:43 PM",
             hasBadge: true,
           },
           {
             from: "Nvir",
             message:
-              "User: namulabs is fantasic company. I would love to work there.",
+              "namulabs is fantasic company. I would love to work there.",
             recievedAt: "08:42 AM",
             hasBadge: false,
           },

@@ -1,6 +1,5 @@
 import { HeaderAndProfileAtom } from "~/components/Atoms/MessagesPageAtoms/HeaderAndProfileAtom";
 import MessageListAtom from "~/components/Atoms/MessagesPageAtoms/MessageListAtom";
-import { LinkList } from "~/components/Components/LinkList/LinkList";
 
 export interface messageProps {
   from: string;
