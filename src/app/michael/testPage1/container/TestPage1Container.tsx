@@ -7,7 +7,7 @@ export type FooterTabs = "dollarFill" | "message" | "wallet" | "history";
 export const TestPage1Container = () => {
   const [currentTab, setCurrentTab] = useState<number>(2);
   const tabs: FooterTabs[] = ["dollarFill", "message", "wallet", "history"];
-  const [ isCustomModalOpen, setIsCustomModalOpen ] = useState(false);
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
 
   const headerLeftIconClicked = () => {
     void message.info("can't go back");
@@ -54,7 +54,8 @@ export const TestPage1Container = () => {
             setModalOpen: setIsCustomModalOpen,
           },
           title: "Transaction processing",
-          description: "Uploading your transaction to the node. please wait for a moment... This may take up to 2 minutes.",
+          description:
+            "Uploading your transaction to the node. please wait for a moment... This may take up to 2 minutes.",
         },
       },
       testPage1FooterModuleProps: {
