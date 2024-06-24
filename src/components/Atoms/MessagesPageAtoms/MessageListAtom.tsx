@@ -8,7 +8,7 @@ type Props = {
 
 export default function MessageListAtom(props: Props) {
   return (
-    <div className='-mx-5 mt-6 rounded-t-[30px] bg-[#2C2D30] p-5 -mb-8 h-screen'>
+    <div className='-mx-5 mt-6 rounded-t-[30px] bg-[#2C2D30] p-5 -mb-8 h-screen flex-grow'>
       {props.messages.map((message, index) => (
         <MessageCard key={index} message={message} />
       ))}

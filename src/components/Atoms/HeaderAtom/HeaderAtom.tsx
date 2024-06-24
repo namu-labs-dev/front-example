@@ -26,7 +26,7 @@ export const HeaderAtom = (props: Props) => {
       {props.onClickRightIcon && (
         <div
           className='absolute right-0 z-[1] flex w-[50px] cursor-pointer items-center justify-center'
-          onClick={() => console.log("Antd icon clicked")}
+          onClick={props.onClickRightIcon}
         >
           <SettingOutlined
             color='#BFBFBF'

@@ -1,5 +1,6 @@
 import { HeaderAndProfileAtom } from "~/components/Atoms/MessagesPageAtoms/HeaderAndProfileAtom";
 import MessageListAtom from "~/components/Atoms/MessagesPageAtoms/MessageListAtom";
+import { TestPage1CustomModal } from "~/components/Components/TestPage1CustomModal/TestPage1CustomModal";
 
 export interface messageProps {
   from: string;
@@ -10,13 +11,15 @@ export interface messageProps {
 
 type Props = {
   messages: messageProps[];
+  modalProps: React.ComponentProps<typeof TestPage1CustomModal>;
 };
 
 export const TestPage1ContentModule = (props: Props) => {
   return (
     <div className='text-white'>
       <HeaderAndProfileAtom />
-      <MessageListAtom messages={props.messages}/>
+      {!props.modalProps.modalProps.isModalOpen && <MessageListAtom messages={props.messages} />}
+      <TestPage1CustomModal {...props.modalProps} />  
     </div>
   );
 };
