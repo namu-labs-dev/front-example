@@ -12,3 +12,4 @@ export { default as wallet } from "./wallet.svg";
 export { default as message } from "./message.svg";
 export { default as setting } from "./setting.svg";
 export { default as cube } from "./cube.svg";
+export { default as camera } from "./camera.svg";
