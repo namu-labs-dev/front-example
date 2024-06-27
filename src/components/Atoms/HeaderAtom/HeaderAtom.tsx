@@ -3,13 +3,14 @@ import SVGAtom from "../SVGAtom/SVGAtom";
 
 type Props = {
   title: string;
+  bg?: string;
   onClickLeftIcon?: () => void;
   onClickRightIcon?: () => void;
 };
 
 export const HeaderAtom = (props: Props) => {
   return (
-    <div className='relative flex h-full w-full items-center justify-center bg-black'>
+    <div className={`relative flex h-full w-full items-center justify-center ${props.bg ? `bg-${props.bg}` : 'bg-black'}`}>
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (
         <div
@@ -20,7 +21,7 @@ export const HeaderAtom = (props: Props) => {
         </div>
       )}
 
-      <div className='text-white'>{props.title}</div>
+      <div className={`${props.bg ? 'text-black text-lg font-bold' : 'text-white'}`}>{props.title}</div>
 
       {/* Sample using Antd icon */}
       {props.onClickRightIcon && (

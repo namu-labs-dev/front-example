@@ -12,3 +12,4 @@ export { default as history } from "./history.svg";
 export { default as star } from "./star.svg";
 export { default as eth } from "./eth.svg";
 export { default as nvir } from "./nvir.svg";
+export { default as camera } from "./camera.svg";
