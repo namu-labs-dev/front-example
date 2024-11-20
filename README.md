@@ -32,7 +32,7 @@
 
 ## Your Mission
 
-- [Figma Link - work to do](https://www.figma.com/design/C0RmT5wSXpnosob32KLHs4/Untitled?node-id=0-1&t=zkOZ9O1Dlm9FAveq-0)
+- [Figma Link - My Figma Design](https://www.figma.com/design/woh625WWLkXky7J5aqsD3P/Cyrus-Tabji---NamuSoft-Test?node-id=0-1&node-type=canvas&t=7jqCK5SIZWAuhBpy-0)
 - No questions allowed before your mission is done
   - This is part of our process
   - You can ask question after your misssion is completed

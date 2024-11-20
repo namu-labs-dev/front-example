@@ -36,6 +36,23 @@ export const HomeDescriptionModule = () => {
       </div>
 
       <div className="flex flex-col gap-1 text-[14px]">
+        <b>Software Developers Responsibilities</b>
+        <ol className="list-outside list-decimal pl-7">
+          <li>
+            Write clean, scalable, and efficient code.
+          </li>
+          <li>
+            Design, develop, test, and deploy software solutions
+            based on business and technical requirements.
+          </li>
+          <li>
+            Collaborate with other engineers to build and
+            maintain robust and scalable software systems.
+          </li>
+        </ol>
+      </div>
+
+      <div className="flex flex-col gap-1 text-[14px]">
         <b>Minimum ability we want from developers</b>
         <ol className="list-outside list-decimal pl-7">
           <li>
